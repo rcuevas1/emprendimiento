@@ -1,6 +1,4 @@
 Test1::Application.routes.draw do
-  resources :missions
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
