@@ -1,5 +1,9 @@
 class Idea < ActiveRecord::Base
-  attr_accessible :content, :followers, :user_id
+  attr_accessible :content
+
   belongs_to :user
-  validates :content, :length => { :maximum => 140 }
+
+  validates :content, presence: true, length: { maximum: 120 }
+  validates :user_id, presence: true
+  default_scope order: 'ideas.created_at DESC'
 end

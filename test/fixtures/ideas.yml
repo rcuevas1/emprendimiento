@@ -3,9 +3,7 @@
 one:
   content: MyString
   user_id: 1
-  followers: 1
 
 two:
   content: MyString
   user_id: 1
-  followers: 1
