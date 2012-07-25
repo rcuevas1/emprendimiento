@@ -14,4 +14,8 @@ class IdeasController < ApplicationController
 
   def destroy
   end
+
+  def show
+    @idea = Idea.find(params[:id])
+  end
 end

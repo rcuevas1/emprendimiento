@@ -1,0 +1,10 @@
+<% @user ||= current_user %>
+<div class="stats">
+  <a href="<%= '#' %>">
+
+    <strong id="following" class="stat">
+      <%=  @user.followed_ideas.count %>
+    </strong>
+    followed ideas
+  </a>
+</div>

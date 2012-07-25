@@ -1,6 +1,10 @@
-Test1::Application.routes.draw do  resources :users
+Test1::Application.routes.draw do
+  resources :users do
+    get :following
+  end
   resources :sessions, only: [:new, :create, :destroy]
-  resources :ideas, only: [:create, :destroy]
+  resources :ideas, only: [:create, :destroy, :show]
+  resources :followships, only: [:create, :destroy]
 
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'

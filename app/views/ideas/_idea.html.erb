@@ -3,4 +3,16 @@
   <span class="timestamp">
     Posted <%= time_ago_in_words(idea.created_at) %> ago.
   </span>
+  <% if current_user.following?(idea) %>
+      <%= form_for(Followship.find_by_followed_idea_id(idea.id),
+                   html: { method: :delete }) do |f| %>
+          <%= f.submit "Unfollow", class: "btn btn-large" %>
+  <% end %>
+  <% else %>
+
+      <%= form_for(current_user.followships.build(followed_idea_id: idea.id)) do |f| %>
+          <div><%= f.hidden_field :followed_idea_id %></div>
+          <%= f.submit "Follow", class: "btn btn-large btn-primary" %>
+  <% end %>
+  <% end %>
 </li>
