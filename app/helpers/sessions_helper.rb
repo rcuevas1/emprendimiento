@@ -41,5 +41,10 @@ module SessionsHelper
   def store_location
     session[:return_to] = request.fullpath
   end
+  
+  def redirect_back
+    redirect_to(session[:return_to])
+    session.delete(:return_to)
+  end
 
 end
