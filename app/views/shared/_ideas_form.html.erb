@@ -4,6 +4,6 @@
       <%= f.text_area :content, placeholder: "Compose new idea..." %>
     </div>  
         
-        <%= hidden_field_tag  'brand_id', 1 %>
+        <%= hidden_field_tag  'brand_id', params[:id] %>
     <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>

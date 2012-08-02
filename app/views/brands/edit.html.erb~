@@ -1,5 +1,5 @@
 <% provide(:title, 'Create Brand') %>
-<h1>Add a new Brand</h1>
+<h1>Edit <%= @brand.name %></h1>
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@brand, :html => {:multipart => true}) do |f| %>
@@ -12,9 +12,9 @@
         <%= f.text_field :description %>
 
 	<%= f.label :image %>
-        <%= f.file_field :image %>
+        <%= f.file_field :description %>
 
-        <%= f.submit "Add Brand", class: "btn btn-large btn-primary" %>
+        <%= f.submit "Update Brand", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
 </div>

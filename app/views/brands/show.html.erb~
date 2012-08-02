@@ -7,6 +7,12 @@
       </h1>
     </section>
     <section>
+        <% if @brand.image? %>
+		<%= image_tag @brand.image.url %>
+		<%= link_to @brand.image.url, @brand.image.url  %>
+	<%end%>
+    </section> 
+    <section>
       <h3>        
         <%= @brand.description %>
       </h3>
@@ -14,6 +20,7 @@
     <section>
           <%= render 'shared/ideas_form' %>
     </section> 
+	
   </aside>
   <div class="span8">
     <% if @brand.ideas.any? %>

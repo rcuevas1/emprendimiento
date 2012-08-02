@@ -7,6 +7,11 @@
       </h1>
     </section>
     <section>
+        <% if @brand.image? %>
+		<%= image_tag @brand.image.url %>		
+	<%end%>
+    </section> 
+    <section>
       <h3>        
         <%= @brand.description %>
       </h3>
