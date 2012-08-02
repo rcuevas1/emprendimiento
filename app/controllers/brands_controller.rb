@@ -1,0 +1,44 @@
+class BrandsController < ApplicationController
+  before_filter :admin_user,     only: [:edit, :update, :destroy, :create, :new]
+  
+  def new
+    @brand = Brand.new
+  end
+  def create
+    @brand = Brand.new(params[:brand])
+    if @brand.save
+      # Handle a successful save.
+      
+      flash[:success] = "Brand created!"
+      redirect_to @brand
+    else
+      render 'new'
+    end
+  end
+  def destroy
+    Brand.find(params[:id]).destroy
+    flash[:success] = "Brand destroyed."
+    redirect_to brands_path
+  end
+  def show
+        @brand = Brand.find(params[:id])
+        @ideas = @brand.ideas.paginate(page: params[:page])
+	@idea  = current_user.ideas.build
+  end
+  def edit
+    @brand = Brand.find(params[:id])
+  end
+  def update
+	@brand = Brand.find(params[:id])
+    if @brand.update_attributes(params[:brand])
+      flash[:success] = "Brand updated"      
+      redirect_to @brand
+    else
+      render 'edit'
+    end
+  end
+	private
+	 	def admin_user
+        	redirect_to(root_path) unless current_user.admin?
+      		end
+end

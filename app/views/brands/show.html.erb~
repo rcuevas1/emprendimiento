@@ -1,0 +1,29 @@
+<% provide(:title, @brand.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>        
+        <%= @brand.name %>
+      </h1>
+    </section>
+    <section>
+      <h3>        
+        <%= @brand.description %>
+      </h3>
+    </section> 
+    <section>
+          <%= render 'shared/ideas_form' %>
+    </section> 
+  </aside>
+  <div class="span8">
+    <% if @brand.ideas.any? %>
+        <h3>Related Ideas (<%= @brand.ideas.count %>)</h3>
+        <ol class="ideas">
+          <% @brand.ideas.each do |idea| %>
+              <%= render 'ideas/idea',:idea => idea %>
+          <% end %>
+        </ol>
+        <%= will_paginate @ideas %>
+    <% end %>
+  </div>
+</div>
