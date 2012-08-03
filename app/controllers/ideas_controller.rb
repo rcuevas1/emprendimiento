@@ -21,6 +21,7 @@ class IdeasController < ApplicationController
 
   def show
     @idea = Idea.find(params[:id])
+    @brand = Brand.find(@idea.brand_id)
     @user = User.find(@idea.user_id)
   end
 end

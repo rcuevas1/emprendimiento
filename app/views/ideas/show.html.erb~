@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <b>User:</b>
-  <%= @idea.user_id %>
+  <b>Created by:</b>
+  <%= @user.name %>
 </p>
 
 <p>
@@ -15,4 +15,13 @@
   <%= @idea.followers.count %>
 </p>
 
-<%= link_to 'Back', ideas_path %>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-url=<%url_for @idea%> data-text="Texto del tweet" data-via="Empowler" data-size="large" data-related="Empowler" data-hashtags="Idea">Tweet</a>
+
+
+</br>
+
+<%=link_to "View other ideas for ".concat(@brand.name) , brand_path(@brand)%>
+
+
+<p>

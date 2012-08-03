@@ -1,6 +1,6 @@
 <li>
   <span class="content"><%= idea.content %></span>
-  <span class="content">Posted by: <%= @user.name %></span>
+  <span class="content">Posted by: <%= idea.user_id %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(idea.created_at) %> ago.
   </span> <span class="content"> Followers: <%= idea.followers.count %></span>
@@ -13,7 +13,8 @@
 
       <%= form_for(current_user.followships.build(followed_idea_id: idea.id)) do |f| %>
           <div><%= f.hidden_field :followed_idea_id %></div>
-          <%= f.submit "Follow", class: "btn btn-large btn-primary" %>
+          <%= f.submit "Follow!", class: "btn btn-large btn-primary" %>
   <% end %>
   <% end %>
+  <a href=<% url_for idea %>, class="twitter-share-button" data-related="Empowler" data-lang="en" data-size="large" data-count="horizontal" 	data-text=<%= idea.content%>, data-via="Empowler" >Tweet</a>
 </li>

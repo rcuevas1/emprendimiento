@@ -13,7 +13,8 @@
 
       <%= form_for(current_user.followships.build(followed_idea_id: idea.id)) do |f| %>
           <div><%= f.hidden_field :followed_idea_id %></div>
-          <%= f.submit "Follow", class: "btn btn-large btn-primary" %>
+          <%= f.submit "Follow!", class: "btn btn-large btn-primary" %>
   <% end %>
   <% end %>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url=<%url_for idea%> data-text="Texto del tweet" data-via="Empowler" data-size="large" data-related="Empowler" data-hashtags="Idea">Tweet</a>
 </li>
