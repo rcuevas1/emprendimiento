@@ -5,7 +5,7 @@ class FollowshipsController < ApplicationController
     store_location
     @idea = Idea.find(params[:followship][:followed_idea_id])
     current_user.follow!(@idea)
-    redirect_to @idea ##TODO: arreglar metodo para que retorne a la misma pagina
+    redirect_to @idea
   end
 
   def destroy

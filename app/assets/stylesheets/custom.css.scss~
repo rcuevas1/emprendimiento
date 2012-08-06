@@ -210,7 +210,8 @@ input, textarea, select, .uneditable-input {
   margin-right: 10px;
 }
 aside {
-  textarea {    
+  textarea {
+    width: 200px
     height: 100px;
     margin-bottom: 5px;
   }

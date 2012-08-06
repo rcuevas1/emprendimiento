@@ -1,25 +1,30 @@
+<aside class="span3">
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Content:</b>
+<% if @brand.image? %>
+		<%= image_tag @brand.image.url %>		
+<%end%>
+<%=link_to "Other ideas for ".concat(@brand.name) , brand_path(@brand)%>
+</aside>
+<aside>
+</br>
+<h3>  
   <%= @idea.content %>
-</p>
-
-<p>
-  <b>Created by:</b>
-  <%= @user.name %>
-</p>
-
+</h3>
+</br>
 <p>
   <b>Followers:</b>
   <%= @idea.followers.count %>
 </p>
-
-
-<a href="https://twitter.com/share" class="twitter-share-button" data-url=<%url_for @idea%> data-text="Texto del tweet" data-via="Empowler" data-size="large" data-related="Empowler" data-hashtags="Idea">Tweet</a>
+<p>
+  <b>Created by:</b>
+  <%=link_to @user.name, @user %>
+</p>
 
 </br>
+<h4>  
+  Share and win extra points!
+</h4>
+</br>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url=<%url_for @idea%> data-text="Texto del tweet" data-via="Empowler" data-size="large" data-related="Empowler" data-hashtags="Idea">Tweet</a>
 
-<%=link_to "View other ideas for ".concat(@brand.name) , brand_path(@brand)%>
-
-<p>
+</aside>

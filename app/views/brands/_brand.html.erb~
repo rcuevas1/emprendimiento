@@ -1,0 +1,35 @@
+<li>
+ <aside class="span2">
+    <section>
+      <h1><%= link_to brand.name, brand %> </h1>
+    </section>
+    <section>
+        <% if brand.image? %>
+		<%= image_tag brand.image.url %>		
+	<%end%>
+    </section> 
+    <section>
+      <h3>        
+        <%= brand.description %>
+      </h3>
+    </section> 
+   <%if not current_user == nil%>
+	<% if current_user.admin?%>
+      | <%= link_to "delete", brand, method: :delete,
+                    data: { confirm: "You sure?" } %>
+  <% end %>
+  <% end %>
+  </aside>
+ <aside class="span2">
+	<% if brand.ideas.any? %>
+	</br>
+        <h3> <%= brand.ideas.count %> Related Ideas </h3>
+        <ol class="ideas"
+          
+              <%= render 'ideas/idea',:idea => brand.ideas.first %>
+         
+        </ol>
+        <%= will_paginate @ideas %>
+    	<% end %>
+ </aside>
+</li>

@@ -7,7 +7,7 @@ Test1::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :ideas, only: [:create, :destroy, :show]
   resources :followships, only: [:create, :destroy]
-  resources :brands, only: [:create, :destroy, :show, :new, :edit, :update]
+  resources :brands, only: [:create, :destroy, :show, :new, :edit, :update, :index]
 
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'

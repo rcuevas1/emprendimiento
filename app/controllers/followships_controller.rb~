@@ -2,14 +2,13 @@ class FollowshipsController < ApplicationController
   before_filter :signed_in_user
 
   def create
-
+    store_location
     @idea = Idea.find(params[:followship][:followed_idea_id])
     current_user.follow!(@idea)
-    redirect_to @idea
+    redirect_to @idea ##TODO: arreglar metodo para que retorne a la misma pagina
   end
 
   def destroy
-
     @idea = Followship.find(params[:id]).followed_idea
     current_user.unfollow!(@idea)
     redirect_to @idea

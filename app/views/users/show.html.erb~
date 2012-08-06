@@ -13,8 +13,8 @@
   </aside>
   <div class="span8">
     <% if @user.ideas.any? %>
-        <h3>Your own ideas (<%= @user.ideas.count %>)</h3>
-        <ol class="ideas">
+        <h3>Ideas (<%= @user.ideas.count %>)</h3>
+        <ol class="Your own ideas">
           <% @user.ideas.each do |idea| %>
               <%= render 'ideas/idea',:idea => idea %>
           <% end %>

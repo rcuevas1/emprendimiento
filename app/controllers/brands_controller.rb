@@ -23,7 +23,12 @@ class BrandsController < ApplicationController
   def show
         @brand = Brand.find(params[:id])
         @ideas = @brand.ideas.paginate(page: params[:page])
+	if current_user != nil
 	@idea  = current_user.ideas.build
+	end
+  end
+  def index
+    @brands= Brand.paginate(page: params[:page])
   end
   def edit
     @brand = Brand.find(params[:id])

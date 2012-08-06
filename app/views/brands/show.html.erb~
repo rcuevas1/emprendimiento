@@ -8,8 +8,7 @@
     </section>
     <section>
         <% if @brand.image? %>
-		<%= image_tag @brand.image.url %>
-		<%= link_to @brand.image.url, @brand.image.url  %>
+		<%= image_tag @brand.image.url %>		
 	<%end%>
     </section> 
     <section>
@@ -18,12 +17,17 @@
       </h3>
     </section> 
     <section>
-          <%= render 'shared/ideas_form' %>
+	<% if current_user != nil %>
+          <%= render 'shared/ideas_form' %>  
+	<% else %>
+	  <h3>Registrarse para crear una idea<h3>	
+	<% end %>
     </section> 
 	
   </aside>
   <div class="span8">
     <% if @brand.ideas.any? %>
+	
         <h3>Related Ideas (<%= @brand.ideas.count %>)</h3>
         <ol class="ideas">
           <% @brand.ideas.each do |idea| %>

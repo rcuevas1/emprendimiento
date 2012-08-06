@@ -25,10 +25,14 @@ class BrandsController < ApplicationController
         @ideas = @brand.ideas.paginate(page: params[:page])
 	@idea  = current_user.ideas.build
   end
+  def index
+    @brands= Brand.paginate(page: params[:page])
+  end
   def edit
     @brand = Brand.find(params[:id])
   end
   def update
+	@brand = Brand.find(params[:id])
     if @brand.update_attributes(params[:brand])
       flash[:success] = "Brand updated"      
       redirect_to @brand

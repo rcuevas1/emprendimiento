@@ -1,20 +1,24 @@
 <li>
-  <span class="content"><%= idea.content %></span>
-  <span class="content">Posted by: <%= idea.user_id %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(idea.created_at) %> ago.
-  </span> <span class="content"> Followers: <%= idea.followers.count %></span>
-  <% if current_user.following?(idea) %>
+  <span><h4><%= idea.content %></h4></span>
+  <span class="content"> Followers: <%= idea.followers.count %></span>
+  <span class="timestamp"> Posted <%= time_ago_in_words(idea.created_at) %> ago. </span> 	
+  <% if current_user != nil %>
+	<% if current_user.following?(idea) %>
       <%= form_for(Followship.find_by_followed_idea_id(idea.id),
                    html: { method: :delete }) do |f| %>
-          <%= f.submit "Unfollow", class: "btn btn-large" %>
+          <%= f.submit "Leave mission", class: "btn btn-large" %>
   <% end %>
   <% else %>
 
       <%= form_for(current_user.followships.build(followed_idea_id: idea.id)) do |f| %>
           <div><%= f.hidden_field :followed_idea_id %></div>
-          <%= f.submit "Follow!", class: "btn btn-large btn-primary" %>
+          <%= f.submit "Join mission!", class: "btn btn-large btn-primary" %>
   <% end %>
   <% end %>
-  <a href="https://twitter.com/share" class="twitter-share-button" data-url=<%url_for idea%> data-text="Texto del tweet" data-via="Empowler" data-size="large" data-related="Empowler" data-hashtags="Idea">Tweet</a>
+  <% else %>
+	<h5><%=link_to "Resgistrate para unirte a esta idea!" , signup_path%></h5> </br>
+  <% end %>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= url_for idea%>" data-text="Texto del tweet" data-via="Empowler" data-size="large" data-related="Empowler" data-hashtags="Idea">Tweet</a>
+	
+<div class="fb-like" data-href="<%= url_for idea%>" data-send="true" data-width="450" data-show-faces="true"></div>
 </li>

@@ -1,5 +1,5 @@
 class Idea < ActiveRecord::Base
-  attr_accessible :content :brand_id
+  attr_accessible :content, :brand_id
   belongs_to :user
 
   has_many :reverse_followships, foreign_key: "followed_idea_id",

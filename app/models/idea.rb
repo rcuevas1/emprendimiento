@@ -11,4 +11,5 @@ class Idea < ActiveRecord::Base
   validates :user_id, presence: true
   validates :brand_id, presence: true
   default_scope order: 'ideas.created_at DESC'
+ 
 end
