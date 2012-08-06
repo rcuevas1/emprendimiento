@@ -20,11 +20,11 @@
   <% end %>
   <% end %>
   </aside>
- <aside class="span2">
+ <aside class="span8">
 	<% if brand.ideas.any? %>	
         <h3> <%= brand.ideas.count %> Related Ideas </h3>
         <ol class="ideas"
-</br>
+  </br>
           
               <%= render 'ideas/idea',:idea => brand.ideas.first %>
          

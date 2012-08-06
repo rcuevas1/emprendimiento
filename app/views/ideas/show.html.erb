@@ -25,6 +25,6 @@
   Share and win extra points!
 </h4>
 </br>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url=<%url_for @idea%> data-text="Texto del tweet" data-via="Empowler" data-size="large" data-related="Empowler" data-hashtags="Idea">Tweet</a>
-
+  <div><%= tweet_button(:via => "Empowler", :text => @idea.content, :count => "horizontal", :related => "Empowler") %></div>	
+  <%= facebook_like %>
 </aside>

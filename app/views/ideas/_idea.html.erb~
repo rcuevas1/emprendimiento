@@ -7,6 +7,7 @@
       <%= form_for(Followship.find_by_followed_idea_id(idea.id),
                    html: { method: :delete }) do |f| %>
           <%= f.submit "Leave mission", class: "btn btn-large" %>
+	
   <% end %>
   <% else %>
 
@@ -18,7 +19,11 @@
   <% else %>
 	<h5><%=link_to "Resgistrate para unirte a esta idea!" , signup_path%></h5> </br>
   <% end %>
-  <a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= url_for idea%>" data-text="Texto del tweet" data-via="Empowler" data-size="large" data-related="Empowler" data-hashtags="Idea">Tweet</a>
-	
-<div class="fb-like" data-href="<%= url_for idea%>" data-send="true" data-width="450" data-show-faces="true"></div>
+  <span>
+  <%= tweet_button(:via => "Empowler", :text => idea.content, :count => "horizontal", :related => "Empowler") %>	  
+  </span>
+  <span><%= facebook_like %> </span>
+
+ 
 </li>
+

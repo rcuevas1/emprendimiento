@@ -6,6 +6,7 @@
 	
 </li>
 <li>
-<a href="https://twitter.com/share" class="twitter-share-button" data-related="jasoncosta" data-lang="en" data-size="large" data-count="none">Tweet</a>
+<%= tweet_button(:via => "Empowler", :text => idea.content, :count => "horizontal", :related => "Empowler") %>	
+<%= facebook_like %>
 
 </li>
