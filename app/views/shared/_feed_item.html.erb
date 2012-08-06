@@ -5,6 +5,10 @@
   </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
+  </span></br>
+  <span>
+  <%= tweet_button(:via => "Empowler", :text => feed_item.content, :count => "horizontal", :related => "Empowler") %>	  
   </span>
-  <a href="https://twitter.com/share" class="twitter-share-button" data-url=<%url_for feed_item%> data-text="Texto del tweet" data-via="Empowler" data-size="large" data-related="Empowler" data-hashtags="Idea">Tweet</a>
+	</br>
+  <span><%= facebook_like %> </span>
 </li>

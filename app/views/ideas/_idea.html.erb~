@@ -22,6 +22,7 @@
   <span>
   <%= tweet_button(:via => "Empowler", :text => idea.content, :count => "horizontal", :related => "Empowler") %>	  
   </span>
+	</br>
   <span><%= facebook_like %> </span>
 
  
