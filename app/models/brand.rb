@@ -1,5 +1,4 @@
-class Brand < ActiveRecord::Base
- 
+class Brand < ActiveRecord::Base 
 
   attr_accessible :description, :name, :image
   validates :name, presence: true
