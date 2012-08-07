@@ -28,7 +28,7 @@ class BrandsController < ApplicationController
 	end
   end
   def index
-    @brands= Brand.paginate(page: params[:page])
+    @brands= Brand.paginate(page: params[:page], :per_page => 70)
   end
   def edit
     @brand = Brand.find(params[:id])

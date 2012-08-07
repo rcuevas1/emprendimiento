@@ -9,7 +9,7 @@
         </section>
         <section>
           <h3>Popular Ideas</h3>
-          <%= render 'shared/feed' %>
+          <%= render 'shared/popular_ideas' %>
         </section>
 	<section>
           <h3>Popular Users</h3>
