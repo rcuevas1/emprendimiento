@@ -1,0 +1,14 @@
+<% if @popular_ideas.any? %>
+
+    <ol class="popularideas">
+       <%@popular_ideas.each do |popular_idea|%>
+     <li id="<%= popular_idea.id %>">  
+     <span class="content"><h4><%= popular_idea.content %></h4></span>    
+    <span>
+    Friends aboard:  <%= popular_idea.followers.count %>
+   </span></br>  
+   <span>   
+   </li>
+	<%end%>
+    </ol>    
+<% end %>

@@ -8,11 +8,7 @@
 		<%= image_tag brand.image.url %>		
 	<%end%>
     </section> 
-    <section>
-      <h3>        
-        <%= brand.description %>
-      </h3>
-    </section> 
+   
    <%if not current_user == nil%>
 	<% if current_user.admin?%>
       | <%= link_to "delete", brand, method: :delete,
@@ -20,9 +16,9 @@
   <% end %>
   <% end %>
   </aside>
- <aside class="span4">
+ <aside class="span8">
 	<% if brand.ideas.any? %>	
-        <h3> <%= brand.ideas.count %> Related Ideas </h3>
+        <h3> <%= link_to "Related Ideas", brand%> </h3>
         <ol class="ideas"
   </br>
           

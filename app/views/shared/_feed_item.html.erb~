@@ -1,14 +1,4 @@
 <li id="<%= feed_item.id %>"> 
-  <span class="content"><h4><%= feed_item.content %></h4></span>
-  <span class="user">
-    <%= link_to feed_item.user.name, feed_item.user %>
-  </span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
-  </span></br>
-  <span>
-  <%= tweet_button(:via => "Empowler", :text => feed_item.content, :count => "horizontal", :related => "Empowler") %>	  
-  </span>
-	</br>
-  <span><%= facebook_like %> </span>
+  <%= idea_brand[feed_item.brand_id].name %>
+  
 </li>

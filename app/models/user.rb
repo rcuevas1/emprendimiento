@@ -21,8 +21,9 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
 
   def feed
-    # This is preliminary. See "Following users" for the full implementation.
-    Idea.where("user_id = ?", 1)
+    # aqui se genera el feed que se muestra en home
+    followed_ideas
+    
   end
  #quizas deberian ir en ideas tambien
   def following?(some_idea)

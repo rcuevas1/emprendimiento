@@ -12,15 +12,13 @@
 	<%end%>
     </section> 
     <section>
-      <h3>        
-        <%= @brand.description %>
-      </h3>
+
     </section> 
     <section>
 	<% if current_user != nil %>
           <%= render 'shared/ideas_form' %>  
 	<% else %>
-	  <h3>Registrarse para crear una idea<h3>	
+	  <h3>Registrarse para crear una idea</h3>	
 	<% end %>
     </section> 
 	

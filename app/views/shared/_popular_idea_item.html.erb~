@@ -1,0 +1,10 @@
+<li id="<%= popular_idea_item.id %>"> 
+ 
+  <span class="content"><%= popular_idea_item.content %></span>
+  </br>
+  <span>
+    <h4>Friends aboard:</h4> <h3><%= popular_idea_item.followers.count %></h3>
+  </span></br>  
+  <span> 
+  
+</li>
