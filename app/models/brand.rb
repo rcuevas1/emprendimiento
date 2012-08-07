@@ -1,5 +1,5 @@
 class Brand < ActiveRecord::Base
-  require 'RMagick'
+ 
 
   attr_accessible :description, :name, :image
   validates :name, presence: true
