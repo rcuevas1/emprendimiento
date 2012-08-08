@@ -3,7 +3,7 @@
 <% @popular_brands.each do |brand|%>
         <% if brand.image? %>
 	
-	<%= link_to (image_tag brand.image.url(:thumb)), 
+	<%= link_to (image_tag brand.image.url), 
         url_for({:controller => 'brands', :action => 'show', :id => brand.id})%>
 
 	<%end%>
