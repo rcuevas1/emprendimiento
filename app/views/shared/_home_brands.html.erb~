@@ -1,4 +1,5 @@
 <li> 
+<%if @popular_brands.length == 4%>
 <% @popular_brands.each do |brand|%>
         <% if brand.image? %>
 	
@@ -6,5 +7,6 @@
         url_for({:controller => 'brands', :action => 'show', :id => brand.id})%>
 
 	<%end%>
+<%end%>
 <%end%>
 </li>
