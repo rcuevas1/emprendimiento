@@ -7,19 +7,26 @@
         <section>
           <%= render 'shared/following_stats' %>
         </section>
+	<section>
+          <h3>Popular Users</h3>
+	<%= image_tag("LogoThumb.jpg", alt: "Empowler")%>
+	<p></p>
+        </section>
         <section>
           <h3>Popular Ideas</h3>
           <%= render 'shared/popular_ideas' %>
         </section>
-	<section>
-          <h3>Popular Users</h3>
-        </section>
+	
       </aside>
       <div class="span8">
         <h3>Ideas you are following</h3>
         <%= render 'shared/feed' %>
       </div>
     </div>
+	<section>
+          <h3>Share your ideas!</h3>
+        <%= render 'shared/home_brands'%>
+        </section>
 <% else %>
     <div class="center hero-unit">
       <h1>Welcome to Empowler</h1>
@@ -33,7 +40,4 @@
 
     <%= link_to image_tag("LogoThumb.jpg", alt: "Empowler"), '#' %>
 <% end %> 
-<section>
-          <h3>Share your ideas!</h3>
-        <%= render 'shared/popular_brands'%>
-        </section>
+
