@@ -5,7 +5,7 @@
     </section>
     <section>
         <% if brand.image? %>
-		<%= image_tag brand.image.url(:thumb) %>		
+		<%= image_tag brand.image.url %>		
 	<%end%>
     </section> 
    
