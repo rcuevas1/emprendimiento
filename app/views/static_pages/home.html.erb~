@@ -3,14 +3,12 @@
       <aside class="span4">
         <section>
           <%= render 'shared/user_info' %>
-        </section>
-        <section>
           <%= render 'shared/following_stats' %>
         </section>
+        
 	<section>
-          <h3>Popular Users</h3>
 	<%= image_tag("LogoThumb.jpg", alt: "Empowler")%>
-	<p></p>
+	<p>Feel free to share your  ideas</p>
         </section>
         <section>
           <h3>Popular Ideas</h3>
@@ -20,6 +18,9 @@
       </aside>
       <div class="span8">
         <h3>Ideas you are following</h3>
+	<%if @feed_items.empty?%>
+	
+	<%end%>
         <%= render 'shared/feed' %>
       </div>
     </div>

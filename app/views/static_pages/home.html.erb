@@ -3,10 +3,9 @@
       <aside class="span4">
         <section>
           <%= render 'shared/user_info' %>
-        </section>
-        <section>
           <%= render 'shared/following_stats' %>
         </section>
+        
 	<section>
 	<%= image_tag("LogoThumb.jpg", alt: "Empowler")%>
 	<p>Feel free to share your  ideas</p>
@@ -19,6 +18,9 @@
       </aside>
       <div class="span8">
         <h3>Ideas you are following</h3>
+	<%if @feed_items.empty?%>
+	<h4>Select your favourite brand and start sharing and jumping into ideas</h4>
+	<%end%>
         <%= render 'shared/feed' %>
       </div>
     </div>
