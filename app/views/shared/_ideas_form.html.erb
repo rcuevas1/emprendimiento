@@ -1,7 +1,7 @@
-<%= form_for(@idea) do |f| %>
+<%= form_for(@newidea) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
     <div class="field">
-      <%= f.text_area :content, placeholder: "Share a new idea!" %>
+      <%= f.text_area :content, placeholder: "It would be great if  #{@brand.name}" %>
     </div>  
         
         <%= hidden_field_tag  'brand_id', params[:id] %>

@@ -4,8 +4,8 @@
       <h1><%= link_to brand.name, brand %> </h1>
     </section>
     <section>
-        <% if brand.image? %>
-		<%= image_tag brand.image.url %>		
+        <% if brand.image? %>		
+	<%=link_to image_tag(brand.image.url), url_for({:controller => 'brands', :action => 'show', :id => brand.id}) %>		
 	<%end%>
     </section> 
    
@@ -17,8 +17,8 @@
   <% end %>
   </aside>
  <aside class="span8">
-	<% if brand.ideas.any? %>	
-        <h3> <%= link_to "Related Ideas", brand%> </h3>
+	<% if brand.ideas.any? %>
+        
         <ol class="ideas"
   </br>
           
@@ -28,4 +28,5 @@
         <%= will_paginate @ideas %>
     	<% end %>
  </aside>
+<aside><h3> <%= link_to "More ideas for "@brand.name, brand%> </h3></aside>
 </li>

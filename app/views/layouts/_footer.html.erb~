@@ -1,12 +1,11 @@
 <footer class="footer">
   <small>
-
     by Rodrigo Cuevas
   </small>
   <nav>
     <ul>
-      <li><%= link_to "About",   '#' %></li>
-      <li><%= link_to "Contact", '#' %></li>
+      <li><%= link_to "What's in it for you?",    url_for({:controller => 'static_pages', :action => 'about'}) %></li>
+      
     </ul>
   </nav>
 </footer>

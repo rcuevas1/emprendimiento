@@ -2,12 +2,9 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
   has_secure_password
 
-  has_many  :ideas, dependent: :destroy
-
-
+  has_many :ideas, dependent: :destroy
   has_many :followships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_ideas, through: :followships, source:  :followed_idea
-
 
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token

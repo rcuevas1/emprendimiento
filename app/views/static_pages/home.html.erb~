@@ -10,6 +10,7 @@
 	<%= image_tag("LogoThumb.jpg", alt: "Empowler")%>
 	<p>Feel free to share your  ideas</p>
         </section>
+	
         <section>
           <h3>Popular Ideas</h3>
           <%= render 'shared/popular_ideas' %>
@@ -19,24 +20,24 @@
       <div class="span8">
         <h3>Ideas you are following</h3>
 	<%if @feed_items.empty?%>
-	
+	<h4>Select your favourite brand and start sharing and jumping into ideas</h4>
 	<%end%>
         <%= render 'shared/feed' %>
       </div>
     </div>
 	<section>
-          <h3>Share your ideas!</h3>
+          <h3>Share your ideas for...</h3></br>
         <%= render 'shared/home_brands'%>
         </section>
 <% else %>
     <div class="center hero-unit">
-      <h1>Welcome to Empowler</h1>
-      <h2>
-        Sign Up and start sharing your ideas
-      </h2>
+      
+      <section>
+	<%= image_tag("home.jpg", alt: "Empowler")%>	
+      </section>
 
       <%= link_to "Sign up now!", signup_path,
-                  class: "btn btn-large btn-primary" %>
+                  class: "btn btn-primary btn-large" %>
     </div>
 
     <%= link_to image_tag("LogoThumb.jpg", alt: "Empowler"), '#' %>

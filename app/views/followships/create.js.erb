@@ -1,2 +1,2 @@
 $("#follow_form").html("<%= escape_javascript(render('users/unfollow')) %>")
-$("#followers").html('<%= @idea.followers.count %>')
+$("#followers").html('<%= "#{@idea.followers.count} followers" %>')

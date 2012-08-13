@@ -4,16 +4,12 @@ class StaticPagesController < ApplicationController
     if signed_in?
       @idea  = current_user.ideas.build    
 	#llama al current user, que tiene un atributo feed definido en la clase      
-      @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 2)
-      @popular_ideas = Idea.find([1,2,3,4])
-      @popular_brands = Brand.find([1,2,3,4])
-      @idea_brand = Hash.new
-      @feed_items.each do |fi|
-          @idea_brand[fi] = Brand.find(fi.brand_id)
-       end
+      @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 1)
+      @popular_ideas =  Idea.find([1,2])
+      @popular_brands = Brand.find([1,2])     
     end
   end
 
-  def help
+  def about
   end
 end

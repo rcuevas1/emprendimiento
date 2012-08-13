@@ -1,14 +1,10 @@
 <li> 
 <%if @popular_brands != nil%>
-<%if @popular_brands.length == 4%>
-<% @popular_brands.each do |brand|%>
-        <% if brand.image? %>
-	
+<%@popular_brands.each do |brand|%>
+        <% if brand.image? %>	
 	<%= link_to (image_tag brand.image.url(:thumb)), 
-        url_for({:controller => 'brands', :action => 'show', :id => brand.id})%>
-
+        url_for({:controller => 'brands', :action => 'show', :id => brand.id}) %>
 	<%end%>
-<%end%>
 <%end%>
 <%end%>
 </li>

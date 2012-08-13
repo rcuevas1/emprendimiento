@@ -24,7 +24,7 @@ class BrandsController < ApplicationController
         @brand = Brand.find(params[:id])
         @ideas = @brand.ideas.paginate(page: params[:page])
 	if current_user != nil
-	@idea  = current_user.ideas.build
+	@newidea  = current_user.ideas.build
 	end
   end
   def index

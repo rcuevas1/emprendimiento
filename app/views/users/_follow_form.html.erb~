@@ -1,12 +1,7 @@
   <% if current_user.following?(idea) %>
-      <%= form_for(Followship.find_by_followed_idea_id(idea.id),
-                   html: { method: :delete }, remote: true) do |f| %>
-          <%= f.submit "Unfollow", class: "btn btn-large" %>
-  <% end %>
-  <% else %>
-
-      <%= form_for(current_user.followships.build(followed_idea_id: idea.id), remote: true) do |f| %>
-          <div><%= f.hidden_field :followed_idea_id %></div>
-          <%= f.submit "Follow", class: "btn btn-large btn-primary" %>
-  <% end %>
+	<div id="follow_form">
+    		<%=render :partial => 'users/unfollow',  :locals => {:idea => idea} %>
+  <% else %>     
+		<%= render :partial => 'users/follow', :locals => {:idea => idea} %>
+	</div>
   <% end %>

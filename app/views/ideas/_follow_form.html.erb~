@@ -1,0 +1,5 @@
+  <% if current_user.following?(idea) %>
+     <%= render 'brands/follow', :locals => {:idea => idea} %>
+  <% else %>
+     <%= render 'brands/unfollow',  :locals => {:idea => idea} %>
+  <% end %>
