@@ -1,4 +1,19 @@
 <li id="<%= feed_item.id %>"> 
-  <%= idea_brand[feed_item.brand_id].name %>
-  
+ 
+  <span class="content"><h3><%= feed_item.content %></h3></span>
+  </br>
+  <span>
+    <h4>Friends aboard this mission:</h4> <h3><%= feed_item.followers.count %></h3>
+  </span></br>  
+  <span>
+  <% if current_user != nil %>
+	<%=render :partial => 'users/follow_form',  :locals => {:idea => feed_item} %>
+  <%end%>
+  <%= tweet_button(:via => "Empowler", :text => feed_item.content, :count => "horizontal", :related => "Empowler") %>	  
+  </span>
+	</br>
+  <span><%= facebook_like %> </span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(feed_item.created_at) %>
+  </span>
 </li>

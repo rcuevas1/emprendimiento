@@ -5,18 +5,14 @@ class FollowshipsController < ApplicationController
     
     @idea = Idea.find(params[:followship][:followed_idea_id])
     current_user.follow!(@idea)
-    respond_to do |format|
-      format.html { redirect_to @idea }
-      format.js
-    end
+    redirect_to @idea
+      
+    
   end
 
   def destroy
     @idea = Followship.find(params[:id]).followed_idea
     current_user.unfollow!(@idea)
-    respond_to do |format|
-      format.html { redirect_to @idea }
-      format.js
-    end
+    redirect_to @idea
   end
 end

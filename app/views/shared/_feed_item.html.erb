@@ -6,6 +6,9 @@
     <h4>Friends aboard this mission:</h4> <h3><%= feed_item.followers.count %></h3>
   </span></br>  
   <span>
+  <% if current_user != nil %>
+	<%=render :partial => 'users/follow_form',  :locals => {:idea => feed_item} %>
+  <%end%>
   <%= tweet_button(:via => "Empowler", :text => feed_item.content, :count => "horizontal", :related => "Empowler") %>	  
   </span>
 	</br>

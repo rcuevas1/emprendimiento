@@ -1,15 +1,13 @@
 class FollowshipsController < ApplicationController
-  before_filter :signed_in_user
-  
+  before_filter :signed_in_user  
 
   def create
     
     @idea = Idea.find(params[:followship][:followed_idea_id])
     current_user.follow!(@idea)
-    respond_to do |format|
-      format.html { redirect_to @idea }
-      format.js
-    end
+    redirect_to @idea
+      
+    
   end
 
   def destroy
@@ -17,7 +15,7 @@ class FollowshipsController < ApplicationController
     current_user.unfollow!(@idea)
     respond_to do |format|
       format.html { redirect_to @idea }
-      format.js
+      
     end
   end
 end
