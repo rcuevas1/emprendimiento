@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  before_filter :signed_in_user
+  before_filter :signed_in_user,     only: [:destroy, :create, :new]
 
   def create
     @idea = current_user.ideas.build(params[:idea])

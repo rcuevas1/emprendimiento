@@ -1,5 +1,5 @@
 <% if @popular_ideas.any? %>
-    <ol class="popularideas">
+    <ul class="ideas">
        <%@popular_ideas.each do |popular_idea|%>
      <li id="<%= popular_idea.id %>">  
      <span class="content"><h5><%=link_to popular_idea.content, url_for({:controller => 'ideas', :action => 'show', :id => popular_idea.id}) %></h5></span>    
@@ -9,5 +9,5 @@
    <span>   
    </li>
 	<%end%>
-    </ol>    
+    </ul>    
 <% end %>

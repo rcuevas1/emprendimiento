@@ -1,16 +1,15 @@
-<li>
-  <span><h4><%= idea.content %></h4></span>
-  <span class="content"> Followers: <%= idea.followers.count %></span>
+  <td>
+  <h4><%= idea.content %></h4>
+  <span class="followers"> Followers: <%= idea.followers.count %></span>
   <span class="timestamp"> Posted <%= time_ago_in_words(idea.created_at) %> ago. </span> 	
   <% if current_user != nil %>
 	<%=render :partial => 'users/follow_form',  :locals => {:idea => idea} %>
   <% else %>
 	<h5><%=link_to "Resgistrate para unirte a esta idea!" , signup_path%></h5> </br>
   <% end %>
-  <span>
-  <%= tweet_button(:via => "Empowler", :text => idea.content, :count => "horizontal", :related => "Empowler") %>	  
-  </span>
-	</br>
-  <span><%= facebook_like %> </span>
-</li>
-
+  </td>
+  <td>
+  <%= tweet_button(:via => "Empowler", :text => idea.content, :count => "horizontal", :related => "Empowler") %>
+  <%= facebook_like %>
+  </td>
+	

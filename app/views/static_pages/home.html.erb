@@ -30,16 +30,25 @@
         <%= render 'shared/home_brands'%>
         </section>
 <% else %>
-    <div class="center hero-unit">
-      
-      <section>
-	<%= image_tag("home.jpg", alt: "Empowler")%>	
-      </section>
-
-      <%= link_to "Sign up now!", signup_path,
+ <h2>Empowler</h2>
+ <h2>Think | Act | Transform</h2>
+    <div class="hero-unit">      
+     
+	<table class="home_table">
+	<tr>
+	
+	<td><%= render 'static_pages/popular_ideas'%></td>
+	
+	<td><%= image_tag("home.jpg", alt: "Empowler")%></td>
+	
+	</tr>	
+	</table>     
+   
+	<%= link_to "Sign up now!", signup_path,
                   class: "btn btn-primary btn-large" %>
     </div>
 
-    <%= link_to image_tag("LogoThumb.jpg", alt: "Empowler"), '#' %>
+
+    <%= image_tag("LogoThumb.jpg", alt: "Empowler")%>
 <% end %> 
 

@@ -17,16 +17,11 @@
   <% end %>
   </aside>
  <aside class="span8">
-	<% if brand.ideas.any? %>
-        
-        <ol class="ideas"
-  </br>
-          
-              <%= render 'ideas/idea',:idea => brand.ideas.first %>
-         
-        </ol>
-        <%= will_paginate @ideas %>
+	<% if brand.ideas.any? %>        
+        <section class="ideas">          
+              <%= render 'ideas/idea',:idea => brand.ideas.first %>         
+        </section>        
     	<% end %>
  </aside>
-<aside><h3> <%= link_to "More ideas for "@brand.name, brand%> </h3></aside>
+<aside><h3> <%= link_to "More ideas for #{brand.name}", brand%> </h3></aside>
 </li>
