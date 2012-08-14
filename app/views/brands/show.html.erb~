@@ -12,7 +12,9 @@
 	<%end%>
     </section> 
     <section>
-
+      <h3>        
+        <%= @brand.description %>
+      </h3>
     </section> 
     <section>
 	<% if current_user != nil %>
@@ -24,14 +26,17 @@
 	
   </aside>
   <div class="span8">
-    <% if @brand.ideas.any? %>
-	
+    <% if @brand.ideas.any? %>	
         <h3>Related Ideas (<%= @brand.ideas.count %>)</h3>
-        <ol class="ideas">
-          <% @brand.ideas.each do |idea| %>
+        <ul class="ideas">
+	<table>         
+		<% @brand.ideas.each do |idea| %>
+		<li><tr>
               <%= render 'ideas/idea',:idea => idea %>
-          <% end %>
-        </ol>
+		</tr></li>
+         	 <% end %>	  
+        </table>
+      </ul>
         <%= will_paginate @ideas %>
     <% end %>
   </div>
