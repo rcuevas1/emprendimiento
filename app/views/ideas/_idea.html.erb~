@@ -1,7 +1,7 @@
 
 <td>
   <h4><%= idea.content %></h4>
-  <span class="followers"> Followers: <%= idea.followers.count %></span>
+  <span class="followers"> <i class="icon-user icon-white"></i> Followers: <%= idea.followers.count %></span>
   <span class="timestamp"> Posted <%= time_ago_in_words(idea.created_at) %> ago. </span> 	
   <% if current_user != nil %>
 	<%=render :partial => 'users/follow_form',  :locals => {:idea => idea} %>
@@ -11,7 +11,7 @@
   </td>
   <td>
 	</br>
-  <%= tweet_button( :text => "Just posted a new idea in @Empowler: #{idea.content}", :count => "horizontal", :related => "Empowler", :url => "https://empowler.herokuapp.com/#{url_for(idea)}") %>
+  <%= tweet_button(:text => "Jump into my new idea in @Empowler! #{idea.content}", :count => "horizontal", :related => "Empowler", :url => "https://empowler.herokuapp.com/#{url_for(idea)}") %>
   <%= facebook_like(url_for(idea)) %>
   </td>
   <td>	

@@ -27,16 +27,16 @@
   </aside>
   <div class="span8">
     <% if @brand.ideas.any? %>	
-        <h3>Related Ideas (<%= @brand.ideas.count %>)</h3>
-        <ul class="ideas">
+        
+        
 	<table>         
 		<% @brand.ideas.each do |idea| %>
-		<li><tr>
+		<tr>
               <%= render 'ideas/idea',:idea => idea %>
-		</tr></li>
+		</li>
          	 <% end %>	  
         </table>
-      </ul>
+      
         <%= will_paginate @ideas %>
     <% end %>
   </div>

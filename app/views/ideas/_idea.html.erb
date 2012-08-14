@@ -1,7 +1,7 @@
 
 <td>
   <h4><%= idea.content %></h4>
-  <span class="followers"> Followers: <%= idea.followers.count %></span>
+  <span class="followers">  Followers: <%= idea.followers.count %></span>
   <span class="timestamp"> Posted <%= time_ago_in_words(idea.created_at) %> ago. </span> 	
   <% if current_user != nil %>
 	<%=render :partial => 'users/follow_form',  :locals => {:idea => idea} %>

@@ -16,12 +16,14 @@ class StaticPagesController < ApplicationController
   def admin
 	#Indice ideas/follows
 	@ideas = Idea.all
+	@users = User.all.count
         @followers = 0
 	@ideas.each do |idea|
 		@followers += idea.followers.count
 	end
 	
 	@ratio = @ideas.count.to_f/@followers.to_f
+	@ratio1 = @ideas.count.to_f/@users.to_f
 	
   end
 end
