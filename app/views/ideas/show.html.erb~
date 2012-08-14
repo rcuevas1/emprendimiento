@@ -25,6 +25,6 @@
   Share and win extra points!
 </h4>
 </br>
-  <%= tweet_button(:via => "Empowler", :text => @idea.content, :count => "horizontal", :related => "Empowler") %>	
-  <%= facebook_like %>
+  <div><%= tweet_button(:via => "Empowler", :text => @idea.content, :count => "horizontal", :related => "Empowler") %></div>	
+  <%= facebook_like(@idea) %>
 </aside>

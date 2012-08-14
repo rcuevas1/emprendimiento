@@ -26,5 +26,5 @@
 </h4>
 </br>
   <div><%= tweet_button(:via => "Empowler", :text => @idea.content, :count => "horizontal", :related => "Empowler") %></div>	
-  <%= facebook_like %>
+  <%= facebook_like(url_for(@idea)) %>
 </aside>
