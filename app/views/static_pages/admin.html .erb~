@@ -1,0 +1,5 @@
+<h3>Indice de ideas/followers = <%= @ratio%></h3>
+
+<h3>ideas = <%= @ideas.count%></h3>
+<h3>followers = <%= @followers%></h3>
+

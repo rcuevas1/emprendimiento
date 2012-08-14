@@ -15,9 +15,10 @@ Test1::Application.routes.draw do
 
   root to: 'static_pages#home'
 
-  get "static_pages/home"
-  get "static_pages/help"
+  get "static_pages/home"  
   get "static_pages/about"
+  get "static_pages/admin"
+  match '/admin',  to: 'static_pages#admin'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
