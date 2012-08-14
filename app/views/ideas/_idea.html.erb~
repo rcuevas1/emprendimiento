@@ -11,7 +11,7 @@
   <td>
 	</br>
   <%= tweet_button(:via => "Empowler", :text => idea.content, :count => "horizontal", :related => "Empowler") %>
-  <%= facebook_like %>
+  <%= facebook_like(uri_for(idea)) %>
   </td>
   <td>
 	
