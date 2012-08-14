@@ -21,7 +21,7 @@ class StaticPagesController < ApplicationController
 		@followers += idea.followers.count
 	end
 	
-	@ratio = BigDecimal(@ideas.count)/BigDecimal(@followers)
+	@ratio = (BigDecimal(@ideas.count)/BigDecimal(@followers)).to_f
 	
   end
 end
