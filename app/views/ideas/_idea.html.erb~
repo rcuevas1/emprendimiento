@@ -1,4 +1,4 @@
-<li>  
+
 <td>
   <h4><%= idea.content %></h4>
   <span class="followers"> Followers: <%= idea.followers.count %></span>
@@ -11,10 +11,9 @@
   </td>
   <td>
 	</br>
-  <%= tweet_button(:via => "Empowler", :text => idea.content, :count => "horizontal", :related => "Empowler") %>
+  <%= tweet_button( :text => "Just posted a new idea in @Empowler: #{idea.content}", :count => "horizontal", :related => "Empowler", :url => "https://empowler.herokuapp.com/#{url_for(idea)}") %>
   <%= facebook_like(url_for(idea)) %>
   </td>
   <td>	
   </td>
-</li>
-	
+
