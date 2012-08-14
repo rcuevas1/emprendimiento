@@ -244,3 +244,108 @@ aside {
     margin: 1px 1px;
   }
 }
+
+/* popularideas */
+
+.ideas {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: $grayLight;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {    
+    height: 70px;
+    margin-bottom: 5px;
+  }
+}
+
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $grayLighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+}
+
+/* sign up button */
+
+.button {
+ 
+	/*basic styles*/
+	width: 250px;  height: 50px;  color: white; background-color: #99CF00;
+	text-align: center;  font-size: 30px;  line-height: 50px;
+ 
+ 
+	/*gradient styles*/
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#99CF00), to(#6DB700));
+	background: -moz-linear-gradient(19% 75% 90deg,#6DB700, #99CF00);
+ 
+	/*border styles*/
+	border-left: solid 1px #c3f83a;
+	border-top: solid 1px #c3f83a;
+	border-right: solid 1px #82a528;
+	border-bottom: solid 1px #58701b;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	
+ 
+}
+ 
+.button h3 {
+	font-size: 20px;
+	line-height: 35px;
+	font-family: helvetica, sans-serif;
+}
+ 
+.button p {
+	font-size: 12px;
+	line-height: 4px;
+	font-family: helvetica, sans-serif;
+}
+ 
+a {
+	text-decoration: none;
+	color: fff;
+}
+ 
+.button:hover {
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6DB700), to(#99CF00));
+	background: -moz-linear-gradient(19% 75% 90deg,#99CF00, #6DB700);
+}
+

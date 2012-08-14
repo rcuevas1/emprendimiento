@@ -31,7 +31,7 @@
         </section>
 <% else %>
  <h2>Empowler</h2>
- <h3>Think | Act | Transform</h3>
+ <h2>Think | Act | Transform</h2>
     <div class="hero-unit">      
      
 	<table class="home_table">
@@ -44,10 +44,17 @@
 	</tr>	
 	</table>     
    
-	<%= link_to "Sign up now!", signup_path,
-                  class: "btn btn-primary btn-large" %>
+	
+	<a href = <%= #{url_for(signup_path)}%> >
+	<div class = "button">
+   	<h3>Sign Up!</h3>	
+	<p>Start sharing!</p>
+	</div>
+	</a>
+	
     </div>
-
+	
+	
 
     <%= image_tag("LogoThumb.jpg", alt: "Empowler")%>
 <% end %> 

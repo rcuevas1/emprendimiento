@@ -1,11 +1,11 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">      
-      <%= link_to "Empowler: Think | Act | Transform", brands_path, id: "logo" %>     
+      <%= link_to "Share your ideas!", brands_path, id: "logo" %>     
       <nav>	
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Share your ideas!", brands_path %></li>
+          <li><%= link_to "What's in it for you?",    url_for({:controller => 'static_pages', :action => 'about'}) %></li>
 	  
           <% if signed_in? %>
               

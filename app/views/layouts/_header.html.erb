@@ -5,7 +5,7 @@
       <nav>	
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Share your ideas!", brands_path %></li>
+          <li><%= link_to "What's in for you?",    url_for({:controller => 'static_pages', :action => 'about'}) %></li>
 	  
           <% if signed_in? %>
               
