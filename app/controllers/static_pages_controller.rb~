@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   before_filter :signed_in_user,     only: [:admin]
   def home
       @popular_ideas =  Idea.find([1,2,3])
-      @popular_brands = Brand.find([1,2]) 
+      @popular_brands = Brand.all
     if signed_in?
       @idea  = current_user.ideas.build    
 	#llama al current user, que tiene un atributo feed definido en la clase      
@@ -23,7 +23,7 @@ class StaticPagesController < ApplicationController
 	end
 	
 	@ratio = @ideas.count.to_f/@followers.to_f
-	@ratio1 = @users.to_f/@ideas.count.to_f
+	@ratio1 = @ideas.count.to_f/@users.to_f
 	
   end
 end

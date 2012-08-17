@@ -1,17 +1,12 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">      
-      <%= link_to "Share your ideas!", brands_path, id: "logo" %>     
+     
       <nav>	
         <ul class="nav pull-right">
-        
-	<%= link_to user_path("Home") do %>
-	<li>
-  	<i class="icon-home icon-white"></i> Home
-	</li>
-	<% end %>
+          <li><%= link_to "Home", root_path %></li>
+	
           <li><%= link_to "What's in for you?",    url_for({:controller => 'static_pages', :action => 'about'}) %></li>
-	  
           <% if signed_in? %>
               
               <li id="fat-menu" class="dropdown">

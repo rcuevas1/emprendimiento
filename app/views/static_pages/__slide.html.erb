@@ -22,6 +22,7 @@
         url_for({:controller => 'brands', :action => 'show', :id => brand.id}) %>
 	<%end%> 
 				<p><%= popular_idea.content%></p>
+				<p><i class="icon-flag"></i><%= popular_idea.followers.count %> Supporters!</p>
 			</div>
 		</div>
 	<%end%>

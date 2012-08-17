@@ -2,7 +2,8 @@ class StaticPagesController < ApplicationController
   before_filter :signed_in_user,     only: [:admin]
   def home
       @popular_ideas =  Idea.find([1,2,3])
-      @popular_brands = Brand.find([1,2]) 
+	#por el momento las marcas populares son todas
+      @popular_brands = Brand.all
     if signed_in?
       @idea  = current_user.ideas.build    
 	#llama al current user, que tiene un atributo feed definido en la clase      

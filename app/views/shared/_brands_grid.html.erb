@@ -1,0 +1,20 @@
+<div class="container1">
+
+
+<%@popular_brands.each do |brand|%>
+<div class="float1">
+<div class="spacer1">
+  &nbsp;
+</div>
+  <% if brand.image? %>	
+	<%= link_to (image_tag brand.image.url(:mini)), 
+        url_for({:controller => 'brands', :action => 'show', :id => brand.id}) %>
+	<%end%>
+  
+</div>
+
+<%end%>
+
+
+
+</div>

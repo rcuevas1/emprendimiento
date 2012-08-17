@@ -25,9 +25,10 @@
     </div>
 	
 <% else %>
- <h2>Empowler</h2>
- <h2>Think | Act | Transform</h2>
-	<a href="#" class="bigbutton">my button</a>
+ <div><a href="" class="bigbutton">Ver Misiones</a></div>
+ <h1>Empowler</h1>
+ 
+	
     <div class="hero-unit">      
      
 	<table class="home_table">
@@ -35,16 +36,17 @@
         <td><h3>Misiones Populares!</h3><%= render 'static_pages/_slide' %></td>
 	<td><%= image_tag("home.jpg", alt: "Empowler")%></td>
 	</tr>	
-	</table>    
-    
+	</table>   
 	
-	<a href = <%= url_for(signup_path)%> >
-	<div class = "button">
-   	<h3>Sign Up!</h3>	
-	<p>Start sharing!</p>
-	</div>
-	</a>
+	
     </div>
-    <%= image_tag("LogoThumb.jpg", alt: "Empowler")%>
+
+	<div class="hero-unit">      
+     
+	 <h3>Crea misiones para tus marcas favoritas!</h3>
+	 <div><%= render 'shared/brands_grid' %></div>	
+	
+    </div>
+    
 <% end %> 
 

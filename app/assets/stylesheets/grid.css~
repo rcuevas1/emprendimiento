@@ -1,0 +1,21 @@
+div.container1 {
+  
+  background-color: #ffe;
+	
+  }
+
+div.spacer1 {
+  clear: both;
+  }
+
+div.float1 {
+  
+  
+  margin:4px;
+  border:1px solid #000000;  
+  float:left;
+  
+  }
+  
+
+
