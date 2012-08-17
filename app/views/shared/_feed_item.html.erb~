@@ -12,7 +12,7 @@
   </td>
   <td>
   	<%= tweet_button(:via => "Empowler", :text => feed_item.content, :count => "horizontal", :related => 		"Empowler") %>	  
- 	 </span>
- 	 <span><%= facebook_like %> </span>
+ 	 
+ 	 <%= facebook_like(url_for(feed_item)) %> 
   </td>
-<
+

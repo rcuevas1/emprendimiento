@@ -1,0 +1,24 @@
+
+
+<div class="coda-slider-wrapper">
+	<div class="coda-slider preload" id="coda-slider-1">
+		<%@popular_ideas.each do |popular_idea|%>
+		<%brand = Brand.find(popular_idea.brand_id)%>	 
+
+   	 <div class="panel">
+	
+			<div class="panel-wrapper">
+				<h2 class="title"><%= brand.name%></h2>
+					 <% if brand.image? %>	
+	<%= link_to (image_tag brand.image.url(:mini)), 
+        url_for({:controller => 'brands', :action => 'show', :id => brand.id}) %>
+	<%end%> 
+				<p><%= popular_idea.content%></p>
+			</div>
+		</div>
+	<%end%>
+	</div><!-- .coda-slider -->
+</div><!-- .coda-slider-wrapper -->
+
+
+ 

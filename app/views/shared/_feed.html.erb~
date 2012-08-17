@@ -1,9 +1,7 @@
-<% if @fedd_items.any? %>
+<% if @feed_items.any? %>
     <ul class="ideas">      
-       <%@feed_items.each do |popular_idea|%>	 
-
+       <%@feed_items.each do |popular_idea|%>	
      <li id="<%= popular_idea.id %>"> 
-
      <%brand = Brand.find(popular_idea.brand_id)%>
        <% if brand.image? %>	
 	<%= link_to (image_tag brand.image.url(:mini)), 
@@ -15,6 +13,6 @@
    </span></br>  
    <span>   
    </li>
-	<%end%>
+
     </ul>    
 <% end %>
