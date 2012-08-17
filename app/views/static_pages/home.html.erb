@@ -13,8 +13,8 @@
           <h3>Share your ideas for...</h3></br>
         <%= render 'shared/home_brands'%>
         </section>	
-	
       </aside>
+	
       <div class="span8">
         <h3>Ideas you are following</h3>
 	<%if @feed_items.empty?%>
@@ -27,6 +27,7 @@
 <% else %>
  <h2>Empowler</h2>
  <h2>Think | Act | Transform</h2>
+	<a href="#" class="bigbutton">Create Mision</a>
     <div class="hero-unit">      
      
 	<table class="home_table">
@@ -43,11 +44,7 @@
 	<p>Start sharing!</p>
 	</div>
 	</a>
-	
     </div>
-	
-	
-
     <%= image_tag("LogoThumb.jpg", alt: "Empowler")%>
 <% end %> 
 
