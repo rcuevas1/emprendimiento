@@ -18,10 +18,16 @@
   </aside>
  <aside class="span8">
 	<% if brand.ideas.any? %>        
-        <section class="ideas">          
-              <%= render 'ideas/idea',:idea => brand.ideas.first %>         
-        </section>        
+        <table>    
+	<tr>      
+        <%= render 'ideas/idea',:idea => brand.ideas.first %> 
+	<% if current_user != nil %>
+        <%= render 'shared/ideas_form' %>  
+	<% end %>
+	</tr>       
+        </table>        
     	<% end %>
+        
  </aside>
 <aside><h3> <%= link_to "More ideas for #{brand.name}", brand%> </h3></aside>
 </li>

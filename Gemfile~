@@ -36,7 +36,8 @@ group :production do
   gem 'pg', '0.12.2'
   gem 'will_paginate', '3.0.3'
   gem 'tweet-button'
-  gem 'rmagick'
+  gem "rmagick", :require => 'RMagick'
+
 
 end
 

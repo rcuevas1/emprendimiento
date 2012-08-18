@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   before_filter :signed_in_user,     only: [:admin]
   def home
-      @popular_ideas =  Idea.find([1,2,3])
+      @popular_ideas =  Idea.all
 	#por el momento las marcas populares son todas
       @popular_brands = Brand.all
     if signed_in?

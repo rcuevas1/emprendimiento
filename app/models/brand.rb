@@ -5,4 +5,6 @@ class Brand < ActiveRecord::Base
   has_many :ideas
   has_attached_file :image,
 	:styles => {:mini=> "50x50#",:thumb=> "100x100#",:small  => "150x150>" }
+	
+	
 end
