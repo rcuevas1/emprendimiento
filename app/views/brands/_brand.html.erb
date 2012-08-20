@@ -9,19 +9,14 @@
 	<%end%>
     </section> 
    
-  
+   <%if not current_user == nil%>
+	<% if current_user.admin?%>
+      | <%= link_to "delete", brand, method: :delete,
+                    data: { confirm: "You sure?" } %>
+  <% end %>
+  <% end %>
   </aside>
  <aside class="span8">
-	<% if brand.ideas.any? %>        
-        <table>    
-	<tr>      
-        <%= render 'ideas/idea',:idea => brand.ideas.first %> 
-	<% if current_user != nil %>
-        <%= render 'shared/ideas_form' %>  
-	<% end %>
-	</tr>       
-        </table>        
-    	<% end %>
-        
+
  </aside>
 </li>
