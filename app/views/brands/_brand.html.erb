@@ -9,12 +9,7 @@
 	<%end%>
     </section> 
    
-   <%if not current_user == nil%>
-	<% if current_user.admin?%>
-      | <%= link_to "delete", brand, method: :delete,
-                    data: { confirm: "You sure?" } %>
-  <% end %>
-  <% end %>
+  
   </aside>
  <aside class="span8">
 	<% if brand.ideas.any? %>        
@@ -29,5 +24,4 @@
     	<% end %>
         
  </aside>
-<aside><h3> <%= link_to "More ideas for #{brand.name}", brand%> </h3></aside>
 </li>

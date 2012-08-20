@@ -29,5 +29,4 @@
     	<% end %>
         
  </aside>
-<aside><h3> <%= link_to "More ideas for #{brand.name}", brand%> </h3></aside>
 </li>
