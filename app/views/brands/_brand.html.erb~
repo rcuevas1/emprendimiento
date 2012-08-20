@@ -21,7 +21,7 @@
         <table>    
 	<tr>      
         <%= render 'ideas/idea',:idea => brand.ideas.first %> 
-	<% if current_user != nil %>
+	<% if not current_user == nil %>
         <%= render 'shared/ideas_form' %>  
 	<% end %>
 	</tr>       

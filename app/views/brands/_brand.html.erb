@@ -17,6 +17,14 @@
   <% end %>
   </aside>
  <aside class="span8">
-
+	<% if brand.ideas.any? %>        
+        <table>    
+	<tr>      
+        <%= render 'ideas/idea',:idea => brand.ideas.first %> 
+	
+	</tr>       
+        </table>        
+    	<% end %>
+        
  </aside>
 </li>
