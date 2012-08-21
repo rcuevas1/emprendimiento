@@ -6,6 +6,9 @@
     <ul>
     <li><%= link_to "Quienes somos",    url_for({:controller => 'static_pages', :action => 'about'}) %></li>
       
+	<!-- // MAILCHIMP SUBSCRIBE CODE \\ -->
+	<a href="http://eepurl.com/oFcej">Subscribe to our newsletter</a>
+	<!-- \\ MAILCHIMP SUBSCRIBE LINK // -->
     </ul>
   </nav>
 </footer>
