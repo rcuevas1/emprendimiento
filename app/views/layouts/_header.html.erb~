@@ -30,5 +30,5 @@
     </div>
   </div>
 </br>
-<div><a href="<%= url_for(brands_path)%>" class="bigbutton">Ver y Crear Misiones</a></div>
+<div><a href="<%= url_for(brands_path)%>" class="bigbutton">Ver y Crear Misiones!</a></div>
 </header>
