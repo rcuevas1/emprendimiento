@@ -12,17 +12,17 @@
 </h3>
 </br>
 <p>
-  <b>Followers:</b>
+  <b>Supporters:</b>
   <%= @idea.followers.count %>
 </p>
 <p>
-  <b>Created by:</b>
+  <b>Creada por:</b>
   <%=link_to @user.name, @user %>
 </p>
 
 </br>
 <h4>  
-  Share and win extra points!
+  Comparte y para apoyar esta misión!
 </h4>
 </br>
   <div><%= tweet_button(:via => "Empowler", :text => @idea.content, :count => "horizontal", :related => "Empowler") %></div>	

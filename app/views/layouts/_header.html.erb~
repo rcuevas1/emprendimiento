@@ -14,7 +14,7 @@
                  <i class="icon-user icon-white"></i><%= " #{@current_user.name}" %> <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to "Profile", current_user %></li>
+                  
                   <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                   <li class="divider"></li>
                   <li>
@@ -29,6 +29,4 @@
       </nav>
     </div>
   </div>
-</br>
-<div><a href="<%= url_for(brands_path)%>" class="bigbutton">Ver y Crear Misiones!</a></div>
 </header>
