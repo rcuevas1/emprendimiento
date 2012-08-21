@@ -8,17 +8,17 @@
           <%= render 'shared/following_stats' %>
         </section> 
         <section>
-          <h3>Popular Ideas</h3>
+          <h3>Misiones Populares!</h3>
           <%= render 'shared/popular_ideas' %>
         </section>
 	<section>
-          <h3>Share your ideas for...</h3></br>
+          <h3>Crea misiones para estas marcas!...</h3></br>
         <%= render 'shared/home_brands'%>
         </section>	
       </aside>
 	
       <div class="span8">
-        <h3>Ideas you are following</h3>
+        <h3>Misiones que apoyas!</h3>
 	<%if @feed_items.empty?%>
 	<h4>Select your favourite brand and start sharing and jumping into ideas</h4>
 	<%end%>
@@ -27,7 +27,7 @@
     </div>
 	
 <% else %>
- <div><a href="<%= url_for(brands_path)%>" class="bigbutton">Ver Misiones</a></div>
+
  <h1>Empowler</h1>
  
 	
@@ -36,7 +36,7 @@
 	<table class="home_table">
 	<tr>		
         <td><h3>Misiones Populares!</h3><%= render 'static_pages/_slide' %></td>
-	<td><%= image_tag("home.jpg", alt: "Empowler")%></td>
+	<td><%= image_tag("home.jpg", alt: "Empowler",:size => "400x520")%></td>
 	</tr>	
 	</table>   
 	
