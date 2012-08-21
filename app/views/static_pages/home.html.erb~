@@ -1,5 +1,5 @@
 <% if signed_in? %>
-<div><a href="<%= url_for(brands_path)%>" class="bigbutton">Ver Misiones</a></div>
+
 </br></br></br></br>
     <div class="row">
       <aside class="span4">
@@ -9,7 +9,7 @@
         </section> 
         <section>
           <h3>Misiones Populares!</h3>
-          <%= render 'shared/popular_ideas' %>
+          <%= render 'static_pages/popular_ideas' %>
         </section>
 	<section>
           <h3>Crea misiones para estas marcas!...</h3></br>
@@ -20,7 +20,7 @@
       <div class="span8">
         <h3>Misiones que apoyas!</h3>
 	<%if @feed_items.empty?%>
-	<h4>Select your favourite brand and start sharing and jumping into ideas</h4>
+	<h4>Crea misiones para tu marca tu marca favorita!</h4>
 	<%end%>
         <%= render 'shared/feed' %>
       </div>

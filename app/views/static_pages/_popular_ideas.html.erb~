@@ -9,9 +9,9 @@
 	<%= link_to (image_tag brand.image.url(:mini)), 
         url_for({:controller => 'brands', :action => 'show', :id => brand.id}) %>
 	<%end%> 
-     <span class="content"><h5><%=link_to popular_idea.content, url_for({:controller => 'ideas', :action => 'show', :id => popular_idea.id}) %></h5></span>    
+     <span class="content"><h5><%=link_to popular_idea.content, url_for({:controller => 'brand', :action => 'show', :id => popular_idea.brand_id}) %></h5></span>    
     <span>
-    Friends aboard:  <%= popular_idea.followers.count %>
+    Supporters:  <%= popular_idea.followers.count %>
    </span></br>  
    <span>   
    </li>

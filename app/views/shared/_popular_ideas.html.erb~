@@ -1,10 +1,16 @@
 <% if @popular_ideas.any? %>
     <ul class="ideas">
+	
        <%@popular_ideas.each do |popular_idea|%>
      <li id="<%= popular_idea.id %>">  
-     <span class="content"><h5><%=link_to popular_idea.content, url_for({:controller => 'ideas', :action => 'show', :id => popular_idea.id}) %></h5></span>    
+	<%brand = Brand.find(popular_idea.brand_id)%>
+       <% if brand.image? %>	
+	<%= link_to (image_tag brand.image.url(:mini)), 
+        url_for({:controller => 'brands', :action => 'show', :id => brand.id}) %>
+	<%end%> 
+     <span class="content"><h5><%=link_to popular_idea.content, url_for({:controller => 'brands', :action => 'show', :id => popular_idea.brand_id}) %></h5></span>    
     <span>
-    <i class="icon-user icon-white"></i>  <%= popular_idea.followers.count %>
+    Friends aboard:  <%= popular_idea.followers.count %>
    </span></br>  
    <span>   
    </li>
