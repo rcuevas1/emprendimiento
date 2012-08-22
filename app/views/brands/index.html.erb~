@@ -1,9 +1,10 @@
 <% provide(:title, 'Brands') %>
-<h2>Comparte tus misiones ya!</h2>
+<h2>Comparte tus misiones!</h2>
 
 <%= will_paginate %>
 
 <ul class="users">
+</br>
   <%= render @brands %>
 </ul>
 

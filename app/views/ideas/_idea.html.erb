@@ -15,16 +15,15 @@
   </td>
   <td>
 	</br>
-  <%= tweet_button(:text => "Jump into my new idea in @Empowler! #{idea.content}", :count => "horizontal", :related => "Empowler", :url => "https://empowler.herokuapp.com/#{url_for(idea)}") %>
+  <%= tweet_button(:text => "Únete a mi idea! in @Empowler! #{idea.content}", :count => "horizontal", :related => "Empowler", :url => "https://empowler.herokuapp.com/#{url_for(idea)}") %>
  <%=render :partial => 'shared/fbshare',  :locals => {:idea => idea} %>
    <%if not current_user == nil%>
 	
 	<% if current_user.admin?%>
-      | <%= link_to "delete", idea, method: :delete,
+      | <%= link_to "delete idea", idea, method: :delete,
                     data: { confirm: "You sure?" } %>
   <% end %>
   <% end %>
   </td>
-  <td>	
-  </td>
+  
 

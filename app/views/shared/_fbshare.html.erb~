@@ -1,1 +1,1 @@
-<fb:like href="https://empowler.herokuapp.com<%=url%>" send="true" layout="box_count" width="450" show_faces="true" action="recommend" font="lucida grande"></fb:like>
+<div class = "float"><fb:like href="https://empowler.herokuapp.com<%=url_for(idea)%>" send="true" layout="button_count" width="200" show_faces="false" action="like" font="lucida grande"></fb:like></div>
