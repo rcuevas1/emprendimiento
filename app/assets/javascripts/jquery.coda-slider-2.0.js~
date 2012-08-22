@@ -26,7 +26,7 @@ $.fn.codaSlider = function(settings) {
 		dynamicArrows: true,
 		dynamicArrowLeftText: "&#171",
 		dynamicArrowRightText: "&#187;",
-		dynamicTabs: true,
+		dynamicTabs: false,
 		dynamicTabsAlign: "center",
 		dynamicTabsPosition: "top",
 		externalTriggerSelector: "a.xtrig",

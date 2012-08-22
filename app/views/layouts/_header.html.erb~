@@ -5,7 +5,6 @@
       <nav>	
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
-	
           
           <% if signed_in? %>
               
@@ -29,4 +28,5 @@
       </nav>
     </div>
   </div>
+ <%= render 'shared/bigbutton' %>
 </header>

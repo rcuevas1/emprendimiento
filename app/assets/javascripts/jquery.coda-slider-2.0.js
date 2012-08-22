@@ -20,7 +20,7 @@ $.fn.codaSlider = function(settings) {
 		autoHeightEaseDuration: 1000,
 		autoHeightEaseFunction: "easeInOutExpo",
 		autoSlide: true,
-		autoSlideInterval: 5000,
+		autoSlideInterval: 6500,
 		autoSlideStopWhenClicked: true,
 		crossLinking: true,
 		dynamicArrows: true,
