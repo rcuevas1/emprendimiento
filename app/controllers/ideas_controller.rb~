@@ -1,5 +1,6 @@
 class IdeasController < ApplicationController
-  before_filter :signed_in_user,     only: [:edit, :update, :destroy, :create, :new]
+  before_filter :signed_in_user,     only: [:destroy, :create, :new]
+  before_filter :admin_user,     only: [:destroy]
 
   def create
     @idea = current_user.ideas.build(params[:idea])
@@ -17,6 +18,9 @@ class IdeasController < ApplicationController
   end
 
   def destroy
+    Idea.find(params[:id]).destroy
+    flash[:success] = "Idea destroyed."
+    redirect_to brands_path
   end
 
   def show
