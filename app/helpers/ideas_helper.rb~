@@ -1,23 +1,8 @@
 module IdeasHelper
 
 def facebook_like(idea_url)
-            content_tag :iframe, nil, :src => "http://www.facebook.com/plugins/like.php?href=https://empowler.herokuapp.com#{idea_url}&layout=standard&show_faces=false&width=450&action=like&font=arial&colorscheme=light&height=80", :scrolling => 'no', :frameborder => '0', :allowtransparency => true, :id => :facebook_like
+            content_tag :iframe, nil, :src => "http://www.facebook.com/plugins/like.php?href=https://empowler.herokuapp.com#{idea_url}&layout=standard&show_faces=true&width=450&action=recommend&font=arial&colorscheme=light&height=80", :scrolling => 'no', :frameborder => '0', :allowtransparency => true, :id => :facebook_like
 end
 
-def popular_ideas
-
-	@allideas = Idea.all
-	@idea1 = @allideas.first;
-        @idea2 = nil;
-	@idea3 = nil;
-        @idea4 = nil;
-        @idea5 = nil;
-	@allideas.each do |idea|
-	     if @idea1 != nil && idea.followers.count >= @idea1.followers.count
-		@idea1 = idea
-		
-	end
-
-end
 
 end

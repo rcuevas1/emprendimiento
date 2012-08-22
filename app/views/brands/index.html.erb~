@@ -1,5 +1,5 @@
 <% provide(:title, 'Brands') %>
-<h1>All Brands</h1>
+<h2>Comparte tus misiones ya!</h2>
 
 <%= will_paginate %>
 

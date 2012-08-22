@@ -16,7 +16,14 @@
   <td>
 	</br>
   <%= tweet_button(:text => "Jump into my new idea in @Empowler! #{idea.content}", :count => "horizontal", :related => "Empowler", :url => "https://empowler.herokuapp.com/#{url_for(idea)}") %>
-  <%= facebook_like(url_for(idea)) %>
+ <%=render 'shared/fbshare' %>
+   <%if not current_user == nil%>
+	
+	<% if current_user.admin?%>
+      | <%= link_to "delete", idea, method: :delete,
+                    data: { confirm: "You sure?" } %>
+  <% end %>
+  <% end %>
   </td>
   <td>	
   </td>

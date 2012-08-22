@@ -1,6 +1,6 @@
  <%= form_for(current_user.followships.build(followed_idea_id: idea.id)) do |f| %>
           <div><%= f.hidden_field :followed_idea_id %></div>
-          <%= f.submit "Jump In!", class: "btn btn-large btn-primary" %>
+          <%= f.submit "Unete!", class: "btn btn-large btn-primary" %>
   <% end %>
 
 
