@@ -7,7 +7,7 @@ class Idea < ActiveRecord::Base
            dependent:   :destroy
   has_many :followers, through: :reverse_followships, source: :follower
 
-  validates :content, presence: true, length: { maximum: 120 }
+  validates :content, presence: true, length: { maximum: 500 }
   validates :user_id, presence: true
   validates :brand_id, presence: true
   default_scope order: 'ideas.created_at DESC'

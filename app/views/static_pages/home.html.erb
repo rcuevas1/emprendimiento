@@ -1,5 +1,4 @@
 <% if signed_in? %>
-
 </br></br></br></br>
     <div class="row">
       <aside class="span4">
@@ -29,18 +28,13 @@
 <% else %>
 
  <h1>Empowler</h1>
- 
-	
-    <div class="hero-unit">      
-     
+    <div class="hero-unit">    
 	<table class="home_table">
 	<tr>		
         <td><h3>Misiones Populares!</h3><%= render 'static_pages/_slide' %></td>
 	<td><%= image_tag("home.jpg", alt: "Empowler",:size => "400x520")%></td>
 	</tr>	
-	</table>   
-	
-	
+	</table>  
     </div>
 
 	<div class="hero-unit">      

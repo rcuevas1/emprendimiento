@@ -1,5 +1,4 @@
 <% if signed_in? %>
-
 </br></br></br></br>
     <div class="row">
       <aside class="span4">
@@ -9,7 +8,7 @@
         </section> 
         <section>
           <h3>Misiones Populares!</h3>
-          <%= render 'static_pages/popular_ideas' %>
+          <%= render 'shared/popular_ideas' %>
         </section>
 	<section>
           <h3>Crea misiones para estas marcas!...</h3></br>
