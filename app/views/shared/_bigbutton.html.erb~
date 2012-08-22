@@ -1,4 +1,6 @@
-<a href = <%= url_for(signup_path)%> >
+
+</br></br>
+<a href = <%= url_for(brands_path)%> >
 	<div class = "button">
    	<h3>Misiones</h3>	
 	<p>Ve y crea las tuyas!</p>
