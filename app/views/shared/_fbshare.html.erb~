@@ -1,9 +1,1 @@
-<a href="<%= user_path(current_user) %>">
-  <%= gravatar_for current_user, size: 52 %>
-</a>
-<h1>
-  <%= current_user.name %>
-</h1>
-<span>
-  <%= pluralize(current_user.ideas.count, "idea") %>
-</span>
+<fb:like href="https://empowler.herokuapp.com<%=url%>" send="true" layout="box_count" width="450" show_faces="true" action="recommend" font="lucida grande"></fb:like>
